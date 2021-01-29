@@ -29,28 +29,25 @@
 
                 <div class="input input-text">
                     <label for="Form-Name">
-
                         <input type="text" placeholder="Your Full Name" name="User-Name" id="Form-Name" required>
                     </label>
                 </div>
 
                 <div class="input input-email">
                     <label for="Form-Email">
-
                         <input type="email" placeholder="Your Email Id" name="User-Email" id="Form-Email" required>
                     </label>
                 </div>
 
                 <div class="input input-age">
                     <label for="Form-age">
-
-                        <input type="number" placeholder="Your Age" name="User-Age" id="Form-Age" min="0" max="100" step="0.5"required>
+                        <input type="number" placeholder="Your Age" name="User-Age" id="Form-Age" min="0" max="100"
+                            step="0.5" required>
                     </label>
                 </div>
 
                 <div class="input input-date">
                     <label for="Form-date">
-
                         <input type="date" name="User-DOB" id="Form-DOB" required>
                     </label>
                 </div>
@@ -85,8 +82,6 @@
     </div>
 </body>
 
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://smtpjs.com/v3/smtp.js">
 </script>
@@ -106,21 +101,18 @@
         var rd3 = document.getElementById("Other-Gender");
         var gender;
 
-        if(rd1.checked == true)
+        if (rd1.checked == true)
             gender = rd1.value;
-        else if(rd2.checked == true)
+        else if (rd2.checked == true)
             gender = rd2.value;
-        else if(rd3.checked == true)
+        else if (rd3.checked == true)
             gender = rd3.value;
-
 
         var body = 'Your Name: ' + name + '<br>Your Email ID: ' + email + '<br>Your Age: ' + age + '<br>Your Date Of Birth: ' + date + '<br>Your Gender: ' + gender + '<br>Your Message: <br>' + message;
 
-
         Email.send({
-
             SecureToken: "e9d385a8-44f7-48f4-9846-4e6b5b02440c",
-            To: email , mail_me,
+            To: email, mail_me,
             From: "shindeaditya0258@gmail.com",
             Subject: "Congratulations!! " + name + ". Your Webform has been submitted successfully.",
             Body: body + "<br><br>Hey " + name + ", Thank you for showing your interest in my Webform. Hope you like this project.<br>As this is an auto-generated message, kindly do not reply to this.<br>For any queries we can get in contact through Whatsapp or Instagram.<br><br> Your faithful,<br>Aditya Shinde. "
@@ -135,13 +127,6 @@
                 }
             }
         );
-
     }
 </script>
-
-
-
-
-
-
 </html>
