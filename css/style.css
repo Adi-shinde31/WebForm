@@ -5,11 +5,13 @@
     
 }
 .box{
-    background-image: url(/photos/bg.jpg);
+     /* background-image: url(/photos/bg.jpg); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; 
+    background-image: linear-gradient(to bottom right, red, yellow);
+
     width: 100%;
     height: 900px;
     opacity: .8;
@@ -25,10 +27,11 @@
     opacity: 1;
     font-family: 'Architects Daughter', cursive;
     letter-spacing: 2px;
+    text-shadow: 2px 2px rgb(82, 79, 79), 3px 3px #fff;
 }
 hr{
     margin: 0px 100px 45px;
-    background-color: #000;
+    /* background-color: #000; */
 }
 
 .form-box{
@@ -47,7 +50,6 @@ form{
 .input{
     margin:14px auto;
     text-align: center;
-    /* font-family: 'Fraunces', serif; */
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -93,7 +95,7 @@ input[type="email"]:hover,
 input[type="number"]:hover,
  input[type="date"]:hover,
  textarea:hover{
-    background: #fff;
+    background-color: #fff;
     color: #000;
     cursor: pointer;
     transition: all .2s ease-in ;
@@ -179,16 +181,4 @@ textarea{
         font-size: 40px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
