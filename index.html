@@ -94,7 +94,6 @@
         var age = $('#Form-Age').val();
         var date = $('#Form-DOB').val();
         var message = $('#Form-Message').val();
-        var mail_me = "shindeaditya0258@gmail.com".value;
 
         var rd1 = document.getElementById("Male-Gender");
         var rd2 = document.getElementById("Female-Gender");
@@ -108,14 +107,14 @@
         else if (rd3.checked == true)
             gender = rd3.value;
 
-        var body = 'Your Name: ' + name + '<br>Your Email ID: ' + email + '<br>Your Age: ' + age + '<br>Your Date Of Birth: ' + date + '<br>Your Gender: ' + gender + '<br>Your Message: <br>' + message;
+        var body = 'Your Name: ' + name + '<br>Your Email ID: ' + email + '<br>Your Age: ' + age + 'y/o' + '<br>Your Date Of Birth: ' + date + '<br>Your Gender: ' + gender + '<br>Your Message: <br>' + message;
 
         Email.send({
             SecureToken: "e9d385a8-44f7-48f4-9846-4e6b5b02440c",
-            To: email, mail_me,
+            To: email,
             From: "shindeaditya0258@gmail.com",
             Subject: "Congratulations!! " + name + ". Your Webform has been submitted successfully.",
-            Body: body + "<br><br>Hey " + name + ", Thank you for showing your interest in my Webform. Hope you like this project.<br>As this is an auto-generated message, kindly do not reply to this.<br>For any queries we can get in contact through Whatsapp or Instagram.<br><br> Your faithful,<br>Aditya Shinde. "
+            Body: body + "<br><br>Hey " + name + ", Thank you for showing your interest in my Webform. Hope you like this project.<br>If you have recieved the mail please reply to this mail saying 'Thanks!'  <br>For any queries we can get in contact through Whatsapp or Instagram.<br><br> Yours faithful,<br>Aditya Shinde. "
         }).then(
             message => {
                 if (message == 'OK') {
