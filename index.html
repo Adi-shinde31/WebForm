@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Form</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fraunces:wght@100&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="box">
+        <h1 class="title">
+            Webform
+        </h1>
+
+        <hr>
+
+        <div class="form-box">
+            <form action="javascript:sendmail()" method="POST">
+
+                <div class="input input-text">
+                    <label for="Form-Name">
+
+                        <input type="text" placeholder="Your Full Name" name="User-Name" id="Form-Name" required>
+                    </label>
+                </div>
+
+                <div class="input input-email">
+                    <label for="Form-Email">
+
+                        <input type="email" placeholder="Your Email Id" name="User-Email" id="Form-Email" required>
+                    </label>
+                </div>
+
+                <div class="input input-age">
+                    <label for="Form-age">
+
+                        <input type="number" placeholder="Your Age" name="User-Age" id="Form-Age" min="0" max="100" step="0.5"required>
+                    </label>
+                </div>
+
+                <div class="input input-date">
+                    <label for="Form-date">
+
+                        <input type="date" name="User-DOB" id="Form-DOB" required>
+                    </label>
+                </div>
+
+                <div class="input input-gender ">
+                    <div class="gen">
+                        <input type="radio" name="User-gender" id="Male-Gender" value="Male" checked>
+                        <label for="Male-Gender"><span>Male</span></label>
+                    </div>
+
+                    <div class="gen">
+                        <input type="radio" name="User-gender" id="Female-Gender" value="Female">
+                        <label for="Female-Gender"><span>Female</span></label>
+                    </div>
+
+                    <div class="gen">
+                        <input type="radio" name="User-gender" id="Other-Gender" value="Other">
+                        <label for="Other-Gender"><span>Other</span></label>
+                    </div>
+                </div>
+
+                <div class="input input-textarea">
+                    <textarea name="User_Message" id="Form-Message" cols="30" rows="10"
+                        placeholder="Small Message for me!!" required></textarea>
+                </div>
+
+                <div class="input input-submit">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
+<script>
+
+    function sendmail() {
+        var name = $('#Form-Name').val();
+        var email = $('#Form-Email').val();
+        var age = $('#Form-Age').val();
+        var date = $('#Form-DOB').val();
+        var message = $('#Form-Message').val();
+        var mail_me = "shindeaditya0258@gmail.com".value;
+
+        var rd1 = document.getElementById("Male-Gender");
+        var rd2 = document.getElementById("Female-Gender");
+        var rd3 = document.getElementById("Other-Gender");
+        var gender;
+
+        if(rd1.checked == true)
+            gender = rd1.value;
+        else if(rd2.checked == true)
+            gender = rd2.value;
+        else if(rd3.checked == true)
+            gender = rd3.value;
+
+
+        var body = 'Your Name: ' + name + '<br>Your Email ID: ' + email + '<br>Your Age: ' + age + '<br>Your Date Of Birth: ' + date + '<br>Your Gender: ' + gender + '<br>Your Message: <br>' + message;
+
+
+        Email.send({
+
+            SecureToken: "e9d385a8-44f7-48f4-9846-4e6b5b02440c",
+            To: email , mail_me,
+            From: "shindeaditya0258@gmail.com",
+            Subject: "Congratulations!! " + name + ". Your Webform has been submitted successfully.",
+            Body: body + "<br><br>Hey " + name + ", Thank you for showing your interest in my Webform. Hope you like this project.<br>As this is an auto-generated message, kindly do not reply to this.<br>For any queries we can get in contact through Whatsapp or Instagram.<br><br> Your faithful,<br>Aditya Shinde. "
+        }).then(
+            message => {
+                if (message == 'OK') {
+                    alert("Your form has been send successfully. Please check your Spam Messages to view the mail.")
+                }
+                else {
+                    console.error(message);
+                    alert("There is an error at sending message! Please check your internet connection & try again.")
+                }
+            }
+        );
+
+    }
+</script>
+
+
+
+
+
+
+</html>
