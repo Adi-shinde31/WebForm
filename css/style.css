@@ -5,7 +5,7 @@
     
 }
 .box{
-    background-image: url("/photos/bg.jpg");
+    background-image: url(../photos/bg.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
