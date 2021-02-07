@@ -2,7 +2,6 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    
 }
 .box{
     background-image: url(../photos/bg.jpg);
@@ -31,7 +30,6 @@
 hr{
     margin: 0px 100px 45px;
 }
-
 .form-box{
     width: 100%;
 }
@@ -46,7 +44,6 @@ form{
 .input{
     margin:14px auto;
     text-align: center;
-    
 }
 input, textarea, button{
     font-family: 'Fraunces', serif;
@@ -59,7 +56,6 @@ input, textarea, button{
     text-align: center;
     resize: none;
 }
-
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button{
     appearance: none;
@@ -99,28 +95,22 @@ textarea:focus{
     transition: all .2s ease-in ;
     
 }
-
 button{
     font-weight: bold;
 }
-
 button:hover,button:focus {
     color: #FFF;
     cursor: pointer;
     background-color: rgb(47, 207, 47);
     transition: all .2s ease-in ;
 }
-
 .input-gender .gen {
     display: inline-block;
     margin: 3px 20px 0px;
 }
-
 textarea{
     text-align: left;
 }
-
-
 @media screen and (max-width:748px){
     .input-gender .gen{
         margin: 0 10px ;
@@ -130,14 +120,11 @@ textarea{
         width: 85%;
     }
 }
-
-
 @media screen and (max-width:582px){
     .title{
         font-size: 50px;
     }
 }
-
 @media screen and (max-width:475px){
     .title{
         font-size: 50px;
@@ -146,7 +133,6 @@ textarea{
         height:900px
     }
 }
-
 @media screen and (max-width:360px){
 
     .title{
@@ -163,10 +149,8 @@ textarea{
         width: 85%;
     }
 }
-
 @media screen and (max-width:290px){
     .title{
         font-size: 40px;
     }
 }
-
