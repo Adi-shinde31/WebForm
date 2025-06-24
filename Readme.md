@@ -120,5 +120,6 @@ Web Developer & Designer
 **Aditya Shinde**  
 📧 shindeaditya0258@gmail.com  
 🌐 [LinkedIn](https://www.linkedin.com/in/adi-shinde31)  
-🐙 [GitHub](https://github.com/adishinde31)  
-💼 [Portfolio](https://adishinde31.github.io)
+🐙 [GitHub](https://github.com/Adi-shinde31)  
+💼 [Portfolio](https://adityashinde.netlify.app/)
+
