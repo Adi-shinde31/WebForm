@@ -109,9 +109,9 @@ Web Developer & Designer
 
 ## 📸 Screenshot
 
-![Form Screenshot](photos/output1.jpg)
+[![Form Screenshot](photos/output1.jpg)](https://github.com/Adi-shinde31/WebForm/blob/master/photos/Output1.jpg)
 
-![Email Screenshot](photos/output2.jpg)
+[![Email Screenshot](photos/output2.jpg)](https://github.com/Adi-shinde31/WebForm/blob/master/photos/Output2.jpg)
 
 ---
 
