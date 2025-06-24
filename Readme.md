@@ -109,7 +109,9 @@ Web Developer & Designer
 
 ## 📸 Screenshot
 
-![Form Screenshot](screenshot.png) <!-- optional -->
+![Form Screenshot](photos/output1.jpg)
+
+![Email Screenshot](photos/output2.jpg)
 
 ---
 
